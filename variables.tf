@@ -149,7 +149,7 @@ variable "deploy_airflow" {
 variable "airflow_version" {
   type        = string
   description = "Airflow helm chart version"
-  default     = "1.10.0"
+  default     = "1.11.0"
 }
 
 variable "airflow_values_filepath" {

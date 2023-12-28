@@ -6,7 +6,8 @@ resource "google_sql_database_instance" "airflow_db" {
   project = var.project_id
   region  = var.region
 
-  deletion_protection = var.sql_delete_protection
+  deletion_protection = false
+  #deletion_protection = var.sql_delete_protection
 
   settings {
     tier              = var.sql_tier
