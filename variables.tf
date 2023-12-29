@@ -186,7 +186,7 @@ variable "airflow_logs_sa" {
   Reddis
 *****************************************/
 
-/*
+
 variable "create_redis_secrets" {
   type        = bool
   description = "Create the redis secrets to be used by the helm chart"
@@ -204,4 +204,3 @@ variable "broker_url_secret_name" {
   description = "Name of the secret that stores the redis password"
   default     = "airflow-broker-url"
 }
-*/
