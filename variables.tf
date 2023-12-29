@@ -162,7 +162,7 @@ variable "airflow_values_filepath" {
 /******************************************
   Airflow logging
 *****************************************/
-/*
+
 # If airflow_logs_bucket_name is set to null, no airflow logging resources will be created
 variable "airflow_logs_bucket_name" {
   type        = string
@@ -181,7 +181,7 @@ variable "airflow_logs_sa" {
   description = "Service account with admin access to the bucket where Airflow writes the logs"
   default     = null
 }
-*/
+
 /******************************************
   Reddis
 *****************************************/
