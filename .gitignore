@@ -1,3 +1,6 @@
+# auth
+auth/*
+
 # Local .terraform directories
 **/.terraform/*
 
