@@ -50,7 +50,6 @@ resource "random_password" "db_password" {
   special = false
 }
 
-
 resource "random_password" "fernet_key" {
   count            = var.deploy_cloud_sql ? 1 : 0
   length           = 32

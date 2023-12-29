@@ -24,16 +24,14 @@ locals {
 }
 */
 
-# Airflow HELM # airflow.tf
+# airflow.tf ##### Airflow HELM
 resource "helm_release" "airflow" {
   count = var.deploy_airflow ? 1 : 0
-
   name       = "airflow"
   chart      = "airflow"
   repository = "https://airflow.apache.org"
   version    = var.airflow_version
   namespace  = var.k8s_airflow_namespace
-
   wait = false
 
   values = [
@@ -152,7 +150,9 @@ resource "google_sql_database_instance" "airflow_db" {
   database_version = var.sql_version
 
   project = var.project_id
-  region  = var.gcp_region
+  region  = var.region
+  #region = "europe-west1"
+  #region = var.gcp_region
 
   deletion_protection = false
   #deletion_protection = var.sql_delete_protection
@@ -245,3 +245,4 @@ resource "google_storage_bucket_iam_member" "airflow_logger_admin" {
   role   = "roles/storage.admin"
   member = google_service_account.airflow_logger[0].member
 }
+
