@@ -149,7 +149,7 @@ variable "deploy_airflow" {
 variable "airflow_version" {
   type        = string
   description = "Airflow helm chart version"
-  default     = "1.10.0"
+  default     = "1.11.0"
 }
 
 variable "airflow_values_filepath" {
@@ -158,11 +158,10 @@ variable "airflow_values_filepath" {
   default     = null
 }
 
-
 /******************************************
   Airflow logging
 *****************************************/
-/*
+
 # If airflow_logs_bucket_name is set to null, no airflow logging resources will be created
 variable "airflow_logs_bucket_name" {
   type        = string
@@ -181,12 +180,11 @@ variable "airflow_logs_sa" {
   description = "Service account with admin access to the bucket where Airflow writes the logs"
   default     = null
 }
-*/
+
 /******************************************
   Reddis
 *****************************************/
 
-/*
 variable "create_redis_secrets" {
   type        = bool
   description = "Create the redis secrets to be used by the helm chart"
@@ -204,4 +202,3 @@ variable "broker_url_secret_name" {
   description = "Name of the secret that stores the redis password"
   default     = "airflow-broker-url"
 }
-*/
