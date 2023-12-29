@@ -36,6 +36,7 @@ resource "helm_release" "airflow" {
 
   values = [
     templatefile(var.airflow_values_filepath, {}),
+	# "${file("values.yaml")}"
   ]
 
   #depends_on = [module.secrets.airflow_db_credentials_secret]
