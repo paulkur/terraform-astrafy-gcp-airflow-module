@@ -12,6 +12,11 @@ variable "region" {
   description = "Region of the project where to create the Airflow Resources"
 }
 
+
+variable "gcp_region" {
+  type = string
+}
+
 /******************************************
   Cloud SQL
 *****************************************/
