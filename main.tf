@@ -35,7 +35,8 @@ resource "helm_release" "airflow" {
   wait = false
 
   values = [
-    templatefile(var.airflow_values_filepath, {}),
+    var.airflow_values_filepath
+	#templatefile(var.airflow_values_filepath, {}),
 	# "${file("values.yaml")}"
   ]
 
