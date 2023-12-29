@@ -13,9 +13,9 @@ variable "region" {
 }
 
 
-variable "gcp_region" {
-  type = string
-}
+#variable "gcp_region" {
+#  type = string
+#}
 
 /******************************************
   Cloud SQL
