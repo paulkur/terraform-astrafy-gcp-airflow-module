@@ -16,6 +16,7 @@ terraform {
     kubernetes = {
       source  = "hashicorp/kubernetes"
       version = ">= 2.18.1"
+	  #version = "2.24.0"
     }
     tls = {
       source  = "hashicorp/tls"
@@ -24,6 +25,7 @@ terraform {
     github = {
       source  = "integrations/github"
       version = ">= 5.36.0"
+	  #version = "5.42.0"
     }
     random = {
       source  = "hashicorp/random"
@@ -31,7 +33,8 @@ terraform {
     }
     helm = {
       source  = "hashicorp/helm"
-      version = ">= 2.11.0"
+      #version = ">= 2.11.0"
+	  version = "2.12.1"
     }
   }
 }
