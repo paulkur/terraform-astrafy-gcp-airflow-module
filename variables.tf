@@ -158,7 +158,6 @@ variable "airflow_values_filepath" {
   default     = null
 }
 
-
 /******************************************
   Airflow logging
 *****************************************/
@@ -185,7 +184,6 @@ variable "airflow_logs_sa" {
 /******************************************
   Reddis
 *****************************************/
-
 
 variable "create_redis_secrets" {
   type        = bool
